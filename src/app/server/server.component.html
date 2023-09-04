@@ -1,0 +1,28 @@
+<p>my server component is working!</p>
+<app-servers></app-servers>
+<app-servers></app-servers>
+{{serverid}}
+{{servername}}
+{{getserverstatus()}}
+<button class="btn btn-primary" [disabled]="!myserverprocess" (click)="onservercall()" >add server</button>
+{{myserverdata}}
+<input type="text" [(ngModel)]="myinput">
+<ul>
+    <li [ngClass] ="{'text-success' : testvar ==='success',
+    'text-primary' : testvar ==='primary'}"
+    
+    >list data
+    
+</li>
+
+</ul>
+<p [ngStyle]="{color:testcolor}">ngstyle checking</p>
+<div *ngIf="testinput>10 ; else noData ">
+    <h2>condition true</h2>
+    
+</div>
+<ng-template #noData>
+<h2>condition failed</h2>
+</ng-template>"
+<div *ngFor="let fruit  of fruits;let i = index">{{fruit}}:{{i}}</div>
+ 
